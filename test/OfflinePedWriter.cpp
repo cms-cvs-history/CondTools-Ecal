@@ -1,4 +1,4 @@
-// Uses OCCI to write POOL-ORA objects to a DB
+// Uses Zhen's DBWriter to write POOL-ORA objects to a DB
 
 #include <iostream>
 #include <string>
