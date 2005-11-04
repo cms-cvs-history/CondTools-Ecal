@@ -24,7 +24,7 @@ public:
   WriterApp(string conStr)
   {
     pool::POOLContext::loadComponent( "SEAL/Services/MessageService" );
-    pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Nil );
+    pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Error );
     
     writer = new cond::DBWriter(conStr);
     metadataSvc = new cond::MetaData(conStr);
@@ -55,17 +55,18 @@ public:
     this->buildDetIdVector();
     cout << "Done." << endl;
     
-    cond::IOV* pedIOV = new cond::IOV; 
     string pedTok;
     string pedIOVTok;
 
-    EcalPedestals* ped = new EcalPedestals();
+    EcalPedestals* ped;
     EcalPedestals::Item item;
+    cond::IOV* pedIOV;
 
-    writer->startTransaction();
-    for (int run=0; run<num; run++) {
+    for (int run=1; run<=num; run++) {
       cout << "Run " << run << ": " << flush;
       cout << "Generate pedestals..." << flush;
+
+      ped = new EcalPedestals();
       for (vector<EBDetId>::const_iterator detid_p = detVec.begin();
 	   detid_p != detVec.end();
 	   ++detid_p) 
@@ -79,21 +80,27 @@ public:
 
 	  ped->m_pedestals.insert(std::make_pair(detid_p->rawId(),item));
 	}
-      
+
+      writer->startTransaction();
+
       cout << "Write pedestals..." << flush;
-      pedTok = writer->write<EcalPedestals>(ped, "EcalPedestals");
+      pedTok = writer->write<EcalPedestals>(ped, "EcalPedestals");  // ownership given
 
       cout << "Write IOV..." << flush;
+      pedIOV = new cond::IOV; 
       pedIOV->iov.insert(std::make_pair(run, pedTok));
-      pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");
+      pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");  // ownership given
 
       cout << "Commit..." << flush;
+
       writer->commitTransaction();
 
       cout << "Add MetaData... " << flush;
       metadataSvc->addMapping("EcalPedestals_Nov_test", pedIOVTok);
       cout << "Done." << endl;
     }
+
+    cout << endl;
   }
 
 private:
