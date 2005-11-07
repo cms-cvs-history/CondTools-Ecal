@@ -1,0 +1,9 @@
+<!DOCTYPE POOLFILECATALOG SYSTEM "InMemory">
+<POOLFILECATALOG>
+  <File ID="5AA09744-824D-DA11-9860-00D0B7B86558">
+    <physical>
+      <pfn filetype="POOL_RDBMS" name="oracle://cms_val_lb"/>
+    </physical>
+    <logical/>
+   </File>
+</POOLFILECATALOG>

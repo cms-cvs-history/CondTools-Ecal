@@ -48,7 +48,7 @@ public:
     }
   }
 
-  void writeEcalPedestals(int num)
+  void writeEcalPedestals(int num, string tag)
   {
     pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Nil );
     cout << "Building DetIDs..." << flush;
@@ -96,7 +96,7 @@ public:
       writer->commitTransaction();
 
       cout << "Add MetaData... " << flush;
-      metadataSvc->addMapping("EcalPedestals_Nov_test", pedIOVTok);
+      metadataSvc->addMapping(tag, pedIOVTok);
       cout << "Done." << endl;
     }
 
@@ -112,18 +112,19 @@ private:
 
 int main(int argc, char* argv[])
 {
-  if (argc != 3) {
+  if (argc != 4) {
     cout << "Usage:" << endl;
-    cout << "  " << argv[0] << " <contact string> <num>" << endl;
+    cout << "  " << argv[0] << " <contact string> <num> <tag>" << endl;
     exit(-1);
   }
   
   string conStr = argv[1];
   int num = atoi(argv[2]);
+  string tag = argv[3];
 
   try {
     WriterApp app(conStr);
-    app.writeEcalPedestals(num);
+    app.writeEcalPedestals(num, tag);
   } catch (seal::Exception& e) {
     cout << "seal::Exception:  " << e.what() << endl;
   } catch (exception &e) {
