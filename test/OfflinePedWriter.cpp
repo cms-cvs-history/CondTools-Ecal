@@ -23,9 +23,6 @@ class WriterApp {
 public:
   WriterApp(string conStr)
   {
-    pool::POOLContext::loadComponent( "SEAL/Services/MessageService" );
-    pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Error );
-    
     writer = new cond::DBWriter(conStr);
     metadataSvc = new cond::MetaData(conStr);
   }
@@ -50,7 +47,6 @@ public:
 
   void writeEcalPedestals(int num, string tag)
   {
-    pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Nil );
     cout << "Building DetIDs..." << flush;
     this->buildDetIdVector();
     cout << "Done." << endl;
@@ -60,8 +56,8 @@ public:
 
     EcalPedestals* ped;
     EcalPedestals::Item item;
-    cond::IOV* pedIOV;
-
+    cond::IOV* pedIOV= new cond::IOV; 
+    
     for (int run=1; run<=num; run++) {
       cout << "Run " << run << ": " << flush;
       cout << "Generate pedestals..." << flush;
@@ -77,29 +73,20 @@ public:
 	  item.rms_x6   = rand();
 	  item.mean_x12 = rand();
 	  item.rms_x12  = rand();
-
 	  ped->m_pedestals.insert(std::make_pair(detid_p->rawId(),item));
 	}
-
       writer->startTransaction();
-
       cout << "Write pedestals..." << flush;
       pedTok = writer->write<EcalPedestals>(ped, "EcalPedestals");  // ownership given
-
       cout << "Write IOV..." << flush;
-      pedIOV = new cond::IOV; 
       pedIOV->iov.insert(std::make_pair(run, pedTok));
-      pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");  // ownership given
-
-      cout << "Commit..." << flush;
-
-      writer->commitTransaction();
-
-      cout << "Add MetaData... " << flush;
-      metadataSvc->addMapping(tag, pedIOVTok);
-      cout << "Done." << endl;
     }
-
+    pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");  // ownership given
+    cout << "Commit..." << flush;
+    writer->commitTransaction();
+    cout << "Add MetaData... " << flush;
+    metadataSvc->addMapping(tag, pedIOVTok);
+    cout << "Done." << endl;
     cout << endl;
   }
 
@@ -117,12 +104,12 @@ int main(int argc, char* argv[])
     cout << "  " << argv[0] << " <contact string> <num> <tag>" << endl;
     exit(-1);
   }
-  
   string conStr = argv[1];
   int num = atoi(argv[2]);
   string tag = argv[3];
-
   try {
+    pool::POOLContext::loadComponent( "SEAL/Services/MessageService" );
+    pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Error );  
     WriterApp app(conStr);
     app.writeEcalPedestals(num, tag);
   } catch (seal::Exception& e) {
