@@ -7,6 +7,10 @@
   <use name=CondCore/IOVService>
   <use name=CondCore/MetaDataService>
   <bin file="OfflinePedWriter.cpp"></bin>
+  <use name=oracle>
+  <lib name=nnz10>
+  <lib name=occi>
+  <bin file="OCCIPedReader.cpp"></bin>
 </environment>
 
 
