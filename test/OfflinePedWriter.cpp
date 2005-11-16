@@ -80,6 +80,7 @@ public:
       pedTok = writer->write<EcalPedestals>(ped, "EcalPedestals");  // ownership given
       cout << "Write IOV..." << flush;
       pedIOV->iov.insert(std::make_pair(run, pedTok));
+      cout << "Done." << endl;
     }
     pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");  // ownership given
     cout << "Commit..." << flush;
