@@ -32,8 +32,11 @@ public:
     Environment::terminateEnvironment(env);
   }
 
-  void readPedestalsBasic()
+  void readPedestalsBasic(unsigned int limit)
   {
+    cout << "Reading pedestals with mode 0:  Basic OCCI" << endl;
+    if (limit) { cout << "Limit to " << limit << " objects." << endl; }
+
     Statement* stmt = conn->createStatement();
 
     // Get the object IOVs
@@ -42,6 +45,9 @@ public:
     ResultSet* rset = stmt->executeQuery();
     vector<int> ids;
     while (rset->next()) {
+      if (limit && ids.size() == limit) {
+	break;
+      }
       ids.push_back(rset->getInt(1));
     }
     cout << "Done." << endl;
@@ -84,8 +90,11 @@ public:
     cout << "Finished getting " << last << " objects." << endl;
   }
 
-  void readPedestalsOptimized()
+  void readPedestalsOptimized(unsigned int limit)
   {
+    cout << "Reading pedestals with mode 1:  Optimized OCCI" << endl;
+    if (limit) { cout << "Limit to " << limit << " objects." << endl; }
+
     int size = 61200;  // expected number of rows
     Statement* stmt = conn->createStatement();
     stmt->setPrefetchRowCount(size);
@@ -96,6 +105,9 @@ public:
     ResultSet* rset = stmt->executeQuery();
     vector<int> ids;
     while (rset->next()) {
+      if (limit && ids.size() == limit) {
+	break;
+      }
       ids.push_back(rset->getInt(1));
     }
     cout << "Done." << endl;
@@ -175,8 +187,12 @@ int main(int argc, char* argv[])
   string pass = "val_eca_own_1031";
   
   int mode = 0;
-  if (argc == 2) {
+  if (argc >= 2) {
     mode = atoi(argv[1]);
+  }
+  int limit = 0;
+  if (argc >= 3) {
+    limit = atoi(argv[2]);
   }
 
   try {
@@ -184,10 +200,10 @@ int main(int argc, char* argv[])
     
     switch (mode) {
     case 0:
-      app.readPedestalsBasic();
+      app.readPedestalsBasic(limit);
       break;
     case 1:
-      app.readPedestalsOptimized();
+      app.readPedestalsOptimized(limit);
       break;
     default:
       cerr << "No mode." << endl;
