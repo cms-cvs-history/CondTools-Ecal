@@ -1,0 +1,858 @@
+@(#)CERN job starter $Date: 2005/07/25 10:03:59 $
+Working directory is </pool/lsf/egeland/351634> on <lxb0078.cern.ch>
+
+Creating a developer area based on project CMSSW, version CMSSW_0_2_0_pre7
+Getting project release area....
+Checking SCRAM version....
+
+Checking/creating local storage directories
+
+Creating directory /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/lib/slc3_ia32_gcc323
+Creating directory /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/bin/slc3_ia32_gcc323
+Creating directory /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/test/slc3_ia32_gcc323
+Creating directory /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/logs/slc3_ia32_gcc323
+Creating directory /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/doc
+Creating directory /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/module/slc3_ia32_gcc323
+
+Setting up SELF:
+
+Finding a value for CMSSW_BINDIR:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/bin/slc3_ia32_gcc323
+
+Finding a value for LIBDIR:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/lib/slc3_ia32_gcc323
+
+Finding a value for MODULEDIR:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/module/slc3_ia32_gcc323
+
+Finding a value for INCLUDE:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/src
+
+
+-------------------------------
+
+Runtime path settings for LD_LIBRARY_PATH:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/lib/slc3_ia32_gcc323
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/module/slc3_ia32_gcc323
+
+Runtime path settings for SEAL_PLUGINS:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/module/slc3_ia32_gcc323
+
+Runtime path settings for MODULEPATH:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/module/slc3_ia32_gcc323
+
+Runtime variable LOCALRT set to "/pool/lsf/egeland/351634/CMSSW_0_2_0_pre7"
+
+Runtime path settings for PATH:
+
+	Checks [OK] for /pool/lsf/egeland/351634/CMSSW_0_2_0_pre7/bin/slc3_ia32_gcc323
+
+Runtime variable CMSSW_BASE set to "/pool/lsf/egeland/351634/CMSSW_0_2_0_pre7"
+
+
+
+
+Installation procedure complete.
+Developer area located at:
+
+		/pool/lsf/egeland/351634/CMSSW_0_2_0_pre7
+
+/afs/cern.ch/user/e/egeland/scratch0/readtest/condReaderTest.sh: line 73: project: command not found
+cvs checkout: No CVSROOT specified!  Please use the `-d' option
+cvs [checkout aborted]: or set the CVSROOT environment variable.
+Parsing BuildFiles
+.
+
+>> Building CMSSW version CMSSW_0_2_0_pre7 ----
+[---JOB LOG---] bootstrap_cmssw status 0
+[---JOB LOG---] Using TNS_ADMIN=/pool/lsf/egeland/351634, ORACLE server cms_val_lb.cern.ch at host int2r1-v.cern.ch
+[---JOB LOG---] setup_tns status 0
+[---JOB LOG---] Publishing catalog
+RelationalFileCatalog  Warning Loading "POOL/Services/EnvironmentAuthenticationService"
+[---JOB LOG---] Writing parameter-set file:  MAXEVENTS=10 FIRSTRUN=1 EVENTSINRUN=1
+[---JOB LOG---] write_config ECAL status 0
+[---JOB LOG---] Running job for ECAL EcalPedestals using condReadEcalPedestals.cfg
+[---TIMING LOG---] Running "cmsRun --parameter-set condReadEcalPedestals.cfg" 5 times
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "token" FROM "CMS_VAL_ECAL_POOL_OWNER"."METADATA" WHERE "name"='ecalfall_test'"
+token : [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=IOV][CLID=2F16F0A9-79D5-4881-CE0B-A271DD84A7F1][TECH=00000B00][OID=00000004-00000000]	
+registering Proxies for HcalQIEShapeRcd
+   HcalQIEShape   HcalQIEShape
+registering Proxies for HcalQIEDataRcd
+   HcalQIEData   HcalQIEData
+registering Proxies for HcalPedestalWidthsRcd
+   HcalPedestalWidths   HcalPedestalWidths
+registering Proxies for HcalPedestalsRcd
+   HcalPedestals   HcalPedestals
+registering Proxies for HcalGainWidthsRcd
+   HcalGainWidths   HcalGainWidths
+registering Proxies for HcalGainsRcd
+   HcalGains   HcalGains
+registering Proxies for HcalElectronicsMapRcd
+   HcalElectronicsMap   HcalElectronicsMap
+registering Proxies for HcalChannelQualityRcd
+   HcalChannelQuality   HcalChannelQuality
+registering Proxies for EcalWeightRecAlgoWeightsRcd
+   EcalWeightRecAlgoWeights   EcalWeightRecAlgoWeights
+registering Proxies for EcalPedestalsRcd
+   EcalPedestals   EcalPedestals
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "CONTAINER_ID", "CONTAINER_NAME", "CONTAINER_TYPE", "TABLE_NAME", "CLASS_NAME", "MAPPING_VERSION", "NUMBER_OF_WRITTEN_OBJECTS", "NUMBER_OF_DELETED_OBJECTS" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_RSS_CONTAINERS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "MAPPING_VERSION" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_VERSIONS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='EcalPedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals' AND "VARIABLE_NAME"='m_pedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='EcalPedestals::Item' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='int' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::int'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='cond::IOV' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV' AND "VARIABLE_NAME"='iov' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='string' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::string'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='unsigned long' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::unsigned long'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "IOV_IOV_UNSIGNED_LONG", "IOV_IOV_STRING" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV_IOV" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000000]
+starttime run: 1 event: 0
+stop time run: 1 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 1 event: 1 time 1
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000001]
+starttime run: 2 event: 0
+stop time run: 2 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 2 event: 1 time 5000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000002]
+starttime run: 3 event: 0
+stop time run: 3 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 3 event: 1 time 10000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000003]
+starttime run: 4 event: 0
+stop time run: 4 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 4 event: 1 time 15000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000004]
+starttime run: 5 event: 0
+stop time run: 5 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 5 event: 1 time 20000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000005]
+starttime run: 6 event: 0
+stop time run: 6 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 6 event: 1 time 25000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000006]
+starttime run: 7 event: 0
+stop time run: 7 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 7 event: 1 time 30000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000007]
+starttime run: 8 event: 0
+stop time run: 8 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 8 event: 1 time 35000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000008]
+starttime run: 9 event: 0
+stop time run: 9 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 9 event: 1 time 40000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000009]
+starttime run: 10 event: 0
+stop time run: 10 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 10 event: 1 time 45000001
+>>> processed 10 events
+[---TIMING LOG---] Trial 0:  34 seconds
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "token" FROM "CMS_VAL_ECAL_POOL_OWNER"."METADATA" WHERE "name"='ecalfall_test'"
+token : [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=IOV][CLID=2F16F0A9-79D5-4881-CE0B-A271DD84A7F1][TECH=00000B00][OID=00000004-00000000]	
+registering Proxies for HcalQIEShapeRcd
+   HcalQIEShape   HcalQIEShape
+registering Proxies for HcalQIEDataRcd
+   HcalQIEData   HcalQIEData
+registering Proxies for HcalPedestalWidthsRcd
+   HcalPedestalWidths   HcalPedestalWidths
+registering Proxies for HcalPedestalsRcd
+   HcalPedestals   HcalPedestals
+registering Proxies for HcalGainWidthsRcd
+   HcalGainWidths   HcalGainWidths
+registering Proxies for HcalGainsRcd
+   HcalGains   HcalGains
+registering Proxies for HcalElectronicsMapRcd
+   HcalElectronicsMap   HcalElectronicsMap
+registering Proxies for HcalChannelQualityRcd
+   HcalChannelQuality   HcalChannelQuality
+registering Proxies for EcalWeightRecAlgoWeightsRcd
+   EcalWeightRecAlgoWeights   EcalWeightRecAlgoWeights
+registering Proxies for EcalPedestalsRcd
+   EcalPedestals   EcalPedestals
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "CONTAINER_ID", "CONTAINER_NAME", "CONTAINER_TYPE", "TABLE_NAME", "CLASS_NAME", "MAPPING_VERSION", "NUMBER_OF_WRITTEN_OBJECTS", "NUMBER_OF_DELETED_OBJECTS" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_RSS_CONTAINERS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "MAPPING_VERSION" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_VERSIONS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='EcalPedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals' AND "VARIABLE_NAME"='m_pedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='EcalPedestals::Item' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='int' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::int'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='cond::IOV' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV' AND "VARIABLE_NAME"='iov' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='string' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::string'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='unsigned long' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::unsigned long'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "IOV_IOV_UNSIGNED_LONG", "IOV_IOV_STRING" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV_IOV" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000000]
+starttime run: 1 event: 0
+stop time run: 1 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 1 event: 1 time 1
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000001]
+starttime run: 2 event: 0
+stop time run: 2 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 2 event: 1 time 5000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000002]
+starttime run: 3 event: 0
+stop time run: 3 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 3 event: 1 time 10000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000003]
+starttime run: 4 event: 0
+stop time run: 4 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 4 event: 1 time 15000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000004]
+starttime run: 5 event: 0
+stop time run: 5 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 5 event: 1 time 20000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000005]
+starttime run: 6 event: 0
+stop time run: 6 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 6 event: 1 time 25000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000006]
+starttime run: 7 event: 0
+stop time run: 7 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 7 event: 1 time 30000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000007]
+starttime run: 8 event: 0
+stop time run: 8 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 8 event: 1 time 35000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000008]
+starttime run: 9 event: 0
+stop time run: 9 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 9 event: 1 time 40000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000009]
+starttime run: 10 event: 0
+stop time run: 10 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 10 event: 1 time 45000001
+>>> processed 10 events
+[---TIMING LOG---] Trial 1:  23 seconds
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "token" FROM "CMS_VAL_ECAL_POOL_OWNER"."METADATA" WHERE "name"='ecalfall_test'"
+token : [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=IOV][CLID=2F16F0A9-79D5-4881-CE0B-A271DD84A7F1][TECH=00000B00][OID=00000004-00000000]	
+registering Proxies for HcalQIEShapeRcd
+   HcalQIEShape   HcalQIEShape
+registering Proxies for HcalQIEDataRcd
+   HcalQIEData   HcalQIEData
+registering Proxies for HcalPedestalWidthsRcd
+   HcalPedestalWidths   HcalPedestalWidths
+registering Proxies for HcalPedestalsRcd
+   HcalPedestals   HcalPedestals
+registering Proxies for HcalGainWidthsRcd
+   HcalGainWidths   HcalGainWidths
+registering Proxies for HcalGainsRcd
+   HcalGains   HcalGains
+registering Proxies for HcalElectronicsMapRcd
+   HcalElectronicsMap   HcalElectronicsMap
+registering Proxies for HcalChannelQualityRcd
+   HcalChannelQuality   HcalChannelQuality
+registering Proxies for EcalWeightRecAlgoWeightsRcd
+   EcalWeightRecAlgoWeights   EcalWeightRecAlgoWeights
+registering Proxies for EcalPedestalsRcd
+   EcalPedestals   EcalPedestals
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "CONTAINER_ID", "CONTAINER_NAME", "CONTAINER_TYPE", "TABLE_NAME", "CLASS_NAME", "MAPPING_VERSION", "NUMBER_OF_WRITTEN_OBJECTS", "NUMBER_OF_DELETED_OBJECTS" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_RSS_CONTAINERS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "MAPPING_VERSION" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_VERSIONS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='EcalPedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals' AND "VARIABLE_NAME"='m_pedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='EcalPedestals::Item' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='int' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::int'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='cond::IOV' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV' AND "VARIABLE_NAME"='iov' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='string' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::string'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='unsigned long' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::unsigned long'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "IOV_IOV_UNSIGNED_LONG", "IOV_IOV_STRING" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV_IOV" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000000]
+starttime run: 1 event: 0
+stop time run: 1 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 1 event: 1 time 1
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000001]
+starttime run: 2 event: 0
+stop time run: 2 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 2 event: 1 time 5000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000002]
+starttime run: 3 event: 0
+stop time run: 3 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 3 event: 1 time 10000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000003]
+starttime run: 4 event: 0
+stop time run: 4 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 4 event: 1 time 15000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000004]
+starttime run: 5 event: 0
+stop time run: 5 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 5 event: 1 time 20000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000005]
+starttime run: 6 event: 0
+stop time run: 6 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 6 event: 1 time 25000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000006]
+starttime run: 7 event: 0
+stop time run: 7 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 7 event: 1 time 30000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000007]
+starttime run: 8 event: 0
+stop time run: 8 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 8 event: 1 time 35000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000008]
+starttime run: 9 event: 0
+stop time run: 9 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 9 event: 1 time 40000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000009]
+starttime run: 10 event: 0
+stop time run: 10 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 10 event: 1 time 45000001
+>>> processed 10 events
+[---TIMING LOG---] Trial 2:  20 seconds
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "token" FROM "CMS_VAL_ECAL_POOL_OWNER"."METADATA" WHERE "name"='ecalfall_test'"
+token : [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=IOV][CLID=2F16F0A9-79D5-4881-CE0B-A271DD84A7F1][TECH=00000B00][OID=00000004-00000000]	
+registering Proxies for HcalQIEShapeRcd
+   HcalQIEShape   HcalQIEShape
+registering Proxies for HcalQIEDataRcd
+   HcalQIEData   HcalQIEData
+registering Proxies for HcalPedestalWidthsRcd
+   HcalPedestalWidths   HcalPedestalWidths
+registering Proxies for HcalPedestalsRcd
+   HcalPedestals   HcalPedestals
+registering Proxies for HcalGainWidthsRcd
+   HcalGainWidths   HcalGainWidths
+registering Proxies for HcalGainsRcd
+   HcalGains   HcalGains
+registering Proxies for HcalElectronicsMapRcd
+   HcalElectronicsMap   HcalElectronicsMap
+registering Proxies for HcalChannelQualityRcd
+   HcalChannelQuality   HcalChannelQuality
+registering Proxies for EcalWeightRecAlgoWeightsRcd
+   EcalWeightRecAlgoWeights   EcalWeightRecAlgoWeights
+registering Proxies for EcalPedestalsRcd
+   EcalPedestals   EcalPedestals
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "CONTAINER_ID", "CONTAINER_NAME", "CONTAINER_TYPE", "TABLE_NAME", "CLASS_NAME", "MAPPING_VERSION", "NUMBER_OF_WRITTEN_OBJECTS", "NUMBER_OF_DELETED_OBJECTS" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_RSS_CONTAINERS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "MAPPING_VERSION" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_VERSIONS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='EcalPedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals' AND "VARIABLE_NAME"='m_pedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='EcalPedestals::Item' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='int' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::int'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='cond::IOV' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV' AND "VARIABLE_NAME"='iov' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='string' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::string'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='unsigned long' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::unsigned long'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "IOV_IOV_UNSIGNED_LONG", "IOV_IOV_STRING" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV_IOV" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000000]
+starttime run: 1 event: 0
+stop time run: 1 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 1 event: 1 time 1
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000001]
+starttime run: 2 event: 0
+stop time run: 2 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 2 event: 1 time 5000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000002]
+starttime run: 3 event: 0
+stop time run: 3 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 3 event: 1 time 10000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000003]
+starttime run: 4 event: 0
+stop time run: 4 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 4 event: 1 time 15000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000004]
+starttime run: 5 event: 0
+stop time run: 5 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 5 event: 1 time 20000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000005]
+starttime run: 6 event: 0
+stop time run: 6 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 6 event: 1 time 25000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000006]
+starttime run: 7 event: 0
+stop time run: 7 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 7 event: 1 time 30000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000007]
+starttime run: 8 event: 0
+stop time run: 8 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 8 event: 1 time 35000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000008]
+starttime run: 9 event: 0
+stop time run: 9 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 9 event: 1 time 40000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000009]
+starttime run: 10 event: 0
+stop time run: 10 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 10 event: 1 time 45000001
+>>> processed 10 events
+[---TIMING LOG---] Trial 3:  23 seconds
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "token" FROM "CMS_VAL_ECAL_POOL_OWNER"."METADATA" WHERE "name"='ecalfall_test'"
+token : [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=IOV][CLID=2F16F0A9-79D5-4881-CE0B-A271DD84A7F1][TECH=00000B00][OID=00000004-00000000]	
+registering Proxies for HcalQIEShapeRcd
+   HcalQIEShape   HcalQIEShape
+registering Proxies for HcalQIEDataRcd
+   HcalQIEData   HcalQIEData
+registering Proxies for HcalPedestalWidthsRcd
+   HcalPedestalWidths   HcalPedestalWidths
+registering Proxies for HcalPedestalsRcd
+   HcalPedestals   HcalPedestals
+registering Proxies for HcalGainWidthsRcd
+   HcalGainWidths   HcalGainWidths
+registering Proxies for HcalGainsRcd
+   HcalGains   HcalGains
+registering Proxies for HcalElectronicsMapRcd
+   HcalElectronicsMap   HcalElectronicsMap
+registering Proxies for HcalChannelQualityRcd
+   HcalChannelQuality   HcalChannelQuality
+registering Proxies for EcalWeightRecAlgoWeightsRcd
+   EcalWeightRecAlgoWeights   EcalWeightRecAlgoWeights
+registering Proxies for EcalPedestalsRcd
+   EcalPedestals   EcalPedestals
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle     Info Connected to a server running Oracle version 10.1.0.4.0
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "CONTAINER_ID", "CONTAINER_NAME", "CONTAINER_TYPE", "TABLE_NAME", "CLASS_NAME", "MAPPING_VERSION", "NUMBER_OF_WRITTEN_OBJECTS", "NUMBER_OF_DELETED_OBJECTS" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_RSS_CONTAINERS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "MAPPING_VERSION" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_VERSIONS""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='EcalPedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals' AND "VARIABLE_NAME"='m_pedestals' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='EcalPedestals::Item' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='mean_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::mean_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x1' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x1'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x12' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x12'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item' AND "VARIABLE_NAME"='rms_x6' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::EcalPedestals::Item::rms_x6'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals' AND "VARIABLE_NAME"='int' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_EcalPedestals' AND "SCOPE_NAME"='EcalPedestals::m_pedestals::int'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "VARIABLE_NAME", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' '"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"=' ' AND "VARIABLE_NAME"='cond::IOV' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV' AND "VARIABLE_NAME"='iov' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='string' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::string'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "COLUMN_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_COLUMNS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov' AND "VARIABLE_NAME"='unsigned long' ORDER BY "POSITION""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ELEMENT_TYPE", "VARIABLE_NAME", "VARIABLE_TYPE", "TABLE_NAME" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_OR_MAPPING_ELEMENTS" WHERE "VERSION"='automatic_default_for_cond::IOV' AND "SCOPE_NAME"='cond::IOV::iov::unsigned long'"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___SHAPES" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___LINKS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT * FROM (SELECT "OID", "VALUE" FROM "CMS_VAL_ECAL_POOL_OWNER"."POOL_CONT___PARAMS" WHERE "OID" >= :"OID" ORDER BY "OID") WHERE ROWNUM < 2"
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "IOV_IOV_UNSIGNED_LONG", "IOV_IOV_STRING" FROM "CMS_VAL_ECAL_POOL_OWNER"."COND__IOV_IOV" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000000]
+starttime run: 1 event: 0
+stop time run: 1 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 1 event: 1 time 1
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000001]
+starttime run: 2 event: 0
+stop time run: 2 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 2 event: 1 time 5000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000002]
+starttime run: 3 event: 0
+stop time run: 3 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 3 event: 1 time 10000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000003]
+starttime run: 4 event: 0
+stop time run: 4 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 4 event: 1 time 15000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000004]
+starttime run: 5 event: 0
+stop time run: 5 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 5 event: 1 time 20000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000005]
+starttime run: 6 event: 0
+stop time run: 6 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 6 event: 1 time 25000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000006]
+starttime run: 7 event: 0
+stop time run: 7 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 7 event: 1 time 30000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000007]
+starttime run: 8 event: 0
+stop time run: 8 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 8 event: 1 time 35000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000008]
+starttime run: 9 event: 0
+stop time run: 9 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 9 event: 1 time 40000001
+payloadToken [DB=3AF8ABDD-4450-DA11-8390-0008743F7CC7][CNT=EcalPedestals][CLID=2F16F0A9-79D5-4881-CE0B-C271DD84A7F1][TECH=00000B00][OID=00000003-00000009]
+starttime run: 10 event: 0
+stop time run: 10 event: 0
+invalidateCache
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "ID" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS" WHERE "ID" =:"ID""
+POOL/RelationalPlugins/oracle    Debug Prepared statement : "SELECT "POS", "ID_ID", "M_PEDESTALS_INT", "M_PEDESTALS_ECALPEDESTALS_IT_2", "M_PEDESTALS_ECALPEDESTALS_IT_5", "M_PEDESTALS_ECALPEDESTALS_IT_3", "M_PEDESTALS_ECALPEDESTALS_IT_6", "M_PEDESTALS_ECALPEDESTALS_IT_1", "M_PEDESTALS_ECALPEDESTALS_IT_4" FROM "CMS_VAL_ECAL_POOL_OWNER"."ECALPEDESTALS_M_PE_1" WHERE "ID_ID" = :"ID_ID" ORDER BY "POS""
+got data of type "EcalPedestals" with name "" in record EcalPedestalsRcd
+>>> processing event # run: 10 event: 1 time 45000001
+>>> processed 10 events
+[---TIMING LOG---] Trial 4:  26 seconds
+[---TIMING LOG---] Execution time:  25.2000 +- 4.7916 seconds
+
+Job finished at Wed Nov 16 00:00:27 CET 2005 on node lxb0078.cern.ch
+ under linux version Scientific Linux CERN Release 3.0.5 (SL)
+
+
+CERN statistics: This job used 0:01:22 NCU hours (82 NCU seconds)
+
+CERN statistics: This job used 0:01:22 KSI2K hours (82 KSI2K seconds)
+
+KSI2K = kilo-SpecInt2000 benchmark units = 1.00 NCU
