@@ -76,12 +76,12 @@ public:
       cout << "iterating..." << flush;
       while(rset->next()) {
 	detId = rset->getInt(1);
-	item.mean_x12 = rset->getInt(2);
-	item.rms_x12  = rset->getInt(3);
-	item.mean_x6  = rset->getInt(4);
-	item.rms_x6   = rset->getInt(5);
-	item.mean_x1  = rset->getInt(6);
-	item.rms_x1   = rset->getInt(7);
+	item.mean_x12 = rset->getFloat(2);
+	item.rms_x12  = rset->getFloat(3);
+	item.mean_x6  = rset->getFloat(4);
+	item.rms_x6   = rset->getFloat(5);
+	item.mean_x1  = rset->getFloat(6);
+	item.rms_x1   = rset->getFloat(7);
 	ped.m_pedestals[detId] = item;
 	// ped.m_pedestals.insert(pair<int,EcalPedestals::Item>(detId,item));
       }
