@@ -75,16 +75,23 @@ public:
 	  item.rms_x12  = rand();
 	  ped->m_pedestals.insert(std::make_pair(detid_p->rawId(),item));
 	}
+
       writer->startTransaction();
       cout << "Write pedestals..." << flush;
       pedTok = writer->write<EcalPedestals>(ped, "EcalPedestals");  // ownership given
-      cout << "Write IOV..." << flush;
+      cout << "Commit..." << flush;
+      writer->commitTransaction();  // ped memory freed
+
+      cout << "Insert IOV..." << flush;
       pedIOV->iov.insert(std::make_pair(run, pedTok));
+
       cout << "Done." << endl;
     }
+    writer->startTransaction();
+    cout << "Write IOV..." << flush;
     pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");  // ownership given
     cout << "Commit..." << flush;
-    writer->commitTransaction();
+    writer->commitTransaction();  // pedIOV memory freed
     cout << "Add MetaData... " << flush;
     metadataSvc->addMapping(tag, pedIOVTok);
     cout << "Done." << endl;
