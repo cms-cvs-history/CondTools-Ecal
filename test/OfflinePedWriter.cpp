@@ -1,21 +1,24 @@
 // Uses Zhen's DBWriter to write POOL-ORA objects to a DB
 
-#include <iostream>
-#include <string>
-#include <vector>
-
 #include "CondCore/DBCommon/interface/DBWriter.h"
+#include "CondCore/DBCommon/interface/DBSession.h"
+#include "CondCore/DBCommon/interface/Exception.h"
+#include "CondCore/DBCommon/interface/ServiceLoader.h"
+#include "CondCore/DBCommon/interface/ConnectMode.h"
+#include "CondCore/DBCommon/interface/MessageLevel.h"
+#include "CondFormats/Calibration/interface/Pedestals.h"
 #include "CondCore/IOVService/interface/IOV.h"
 #include "CondCore/MetaDataService/interface/MetaData.h"
-#include "FWCore/Framework/interface/IOVSyncValue.h"
-#include "SealKernel/Service.h"
-#include "POOLCore/POOLContext.h"
-#include "SealKernel/Context.h"
 
 #include "DataFormats/EcalDetId/interface/EBDetId.h"
 #include "CondFormats/EcalObjects/interface/EcalPedestals.h"
 #include "CondFormats/EcalObjects/interface/EcalWeightRecAlgoWeights.h"
 #include "CondFormats/EcalObjects/interface/EcalWeight.h"
+
+#include <iostream>
+#include <string>
+#include <vector>
+
 
 using namespace std;
 
@@ -23,14 +26,27 @@ class WriterApp {
 public:
   WriterApp(string conStr)
   {
-    writer = new cond::DBWriter(conStr);
-    metadataSvc = new cond::MetaData(conStr);
+    loader = new cond::ServiceLoader;
+
+    session = new cond::DBSession(conStr);
+    session->connect(cond::ReadWriteCreate);
+
+    metadataSvc = new cond::MetaData(conStr, *loader);
+    metadataSvc->connect();
+
+    pedWriter = new cond::DBWriter(*session, "EcalPedestals");
+    iovWriter = new cond::DBWriter(*session, "IOV");
   }
 
   ~WriterApp()
   {
-    delete writer;
+    delete pedWriter;
+    delete iovWriter;
+    session->disconnect();
+    delete session;
+    metadataSvc->disconnect();
     delete metadataSvc;
+    delete loader;
   }
 
   void buildDetIdVector()
@@ -56,7 +72,7 @@ public:
 
     EcalPedestals* ped;
     EcalPedestals::Item item;
-    cond::IOV* pedIOV= new cond::IOV; 
+    cond::IOV* pedIOV = new cond::IOV; 
     
     for (int run=1; run<=num; run++) {
       cout << "Run " << run << ": " << flush;
@@ -76,22 +92,22 @@ public:
 	  ped->m_pedestals.insert(std::make_pair(detid_p->rawId(),item));
 	}
 
-      writer->startTransaction();
+      session->startUpdateTransaction();
       cout << "Write pedestals..." << flush;
-      pedTok = writer->write<EcalPedestals>(ped, "EcalPedestals");  // ownership given
+      pedTok = pedWriter->markWrite<EcalPedestals>(ped);
       cout << "Commit..." << flush;
-      writer->commitTransaction();  // ped memory freed
+      session->commit();
 
       cout << "Insert IOV..." << flush;
       pedIOV->iov.insert(std::make_pair(run, pedTok));
 
       cout << "Done." << endl;
     }
-    writer->startTransaction();
+    session->startUpdateTransaction();
     cout << "Write IOV..." << flush;
-    pedIOVTok = writer->write<cond::IOV>(pedIOV, "IOV");  // ownership given
+    pedIOVTok = iovWriter->markWrite<cond::IOV>(pedIOV);
     cout << "Commit..." << flush;
-    writer->commitTransaction();  // pedIOV memory freed
+    session->commit();
     cout << "Add MetaData... " << flush;
     metadataSvc->addMapping(tag, pedIOVTok);
     cout << "Done." << endl;
@@ -99,7 +115,10 @@ public:
   }
 
 private:
-  cond::DBWriter* writer;
+  cond::ServiceLoader* loader;
+  cond::DBSession* session;
+  cond::DBWriter* pedWriter;
+  cond::DBWriter* iovWriter;
   cond::MetaData* metadataSvc;
   vector<EBDetId> detVec;
 
@@ -116,8 +135,6 @@ int main(int argc, char* argv[])
   int num = atoi(argv[2]);
   string tag = argv[3];
   try {
-    pool::POOLContext::loadComponent( "SEAL/Services/MessageService" );
-    pool::POOLContext::setMessageVerbosityLevel( seal::Msg::Error );  
     WriterApp app(conStr);
     app.writeEcalPedestals(num, tag);
   } catch (seal::Exception& e) {
