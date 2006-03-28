@@ -137,8 +137,8 @@ int main(int argc, char* argv[])
   try {
     WriterApp app(conStr);
     app.writeEcalPedestals(num, tag);
-  } catch (seal::Exception& e) {
-    cout << "seal::Exception:  " << e.what() << endl;
+  } catch (cond::Exception& e) {
+    cout << "cond::Exception:  " << e.what() << endl;
   } catch (exception &e) {
     cout << "std::exception:  " << e.what() << endl;
   } catch (...) {
