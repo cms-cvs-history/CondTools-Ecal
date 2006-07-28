@@ -11,4 +11,7 @@
   <bin file="OCCIPedReader.cpp"></bin>
 </environment>
 
-
+<library file=stubs/createEcalObject.cc name=createEcalObject>
+  <use name=CondCore/DBOutputService>
+  <flags SEAL_PLUGIN_NAME="createEcalObject">
+</library>
