@@ -599,4 +599,4 @@ void createEcalObject::analyze( const edm::Event& evt, const edm::EventSetup& ev
 }
 
 #include "FWCore/Framework/interface/MakerMacros.h"
-DEFINE_FWK_MODULE(createEcalObject)
+DEFINE_FWK_MODULE(createEcalObject);
