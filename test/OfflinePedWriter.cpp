@@ -12,7 +12,6 @@
 
 #include "DataFormats/EcalDetId/interface/EBDetId.h"
 #include "CondFormats/EcalObjects/interface/EcalPedestals.h"
-#include "CondFormats/EcalObjects/interface/EcalWeightRecAlgoWeights.h"
 #include "CondFormats/EcalObjects/interface/EcalWeight.h"
 
 #include <iostream>
