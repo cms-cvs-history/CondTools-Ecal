@@ -1,28 +1,19 @@
 <?xml version="1.0" ?>
 <connectionlist>
 
-<!-- sqlite  for testing -->
-<connection name="sqlite_file:mytest.db">
+<connection name="sqlite_file:mydata.db">
   <parameter name="user" value="" />
   <parameter name="password" value="" />
 </connection>
 
-<!-- Location of H4 Beam Conditions -->
+<connection name="oracle://devdb10/CMS_EGELAND_DEV">
+  <parameter name="user" value="CMS_EGELAND_DEV" />
+  <parameter name="password" value="***" />
+</connection>
+
 <connection name="oracle://cmsr/CMS_ECAL_H4_COND">
-  <parameter name="user" value="CMS_ECAL_H4_COND_R" />
-  <parameter name="password" value="readonly1" />
-</connection>
-
-<!-- Location of H2 Beam Conditions -->
-<connection name="oracle://cmsr/CMS_ECALHCAL_H2_COND">
-  <parameter name="user" value="CMS_ECALHCAL_H2_COND_R" />
-  <parameter name="password" value="readonly1" />
-</connection>
-
-<!-- Location of H4 Cosmics Conditions -->
-<connection name="oracle://devdb10/CMS_ECAL">
-  <parameter name="user" value="CMS_ECAL" />
-  <parameter name="password" value="ecaldev05" />
+  <parameter name="user" value="CMS_ECAL_H4_COND" />
+  <parameter name="password" value="***" />
 </connection>
 
 </connectionlist>
