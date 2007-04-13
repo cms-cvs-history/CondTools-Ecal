@@ -1,6 +1,6 @@
 <Flags CXXFLAGS=-g>
 
-<flags EDM_PLUGIN=1>
+<flags SEAL_PLUGIN_NAME="CondToolsEcal">
 
 <use name=boost>
 <use name=FWCore/Framework>
