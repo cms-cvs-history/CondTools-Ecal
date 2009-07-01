@@ -25,7 +25,7 @@ process.source = cms.Source("EmptyIOVSource",
 )
 
 
-records = ["EcalADCToGeVConstant","EcalChannelStatus","EcalGainRatios","EcalTBWeights","EcalWeightXtalGroups","EcalIntercalibConstants","EcalIntercalibErrors","EcalIntercalibConstantsMC"]
+records = ["EcalADCToGeVConstant","EcalChannelStatus","EcalGainRatios","EcalTBWeights","EcalWeightXtalGroups","EcalIntercalibConstants","EcalIntercalibErrors"]
 
 source = []
 
