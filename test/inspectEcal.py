@@ -1,3 +1,5 @@
+#! /usr/bin/env python2.4
+
 import os,sys, DLFCN,getopt
 sys.setdlopenflags(DLFCN.RTLD_GLOBAL+DLFCN.RTLD_LAZY)
 
@@ -5,13 +7,17 @@ from CondCore.Utilities import iovInspector as inspect
 from pluginCondDBPyInterface import *
 
 def usage():
-    print "inspectEcal -c [connectstring] -P [authpath] -t [tag] -f [outfile] -l"
+    print "inspectEcal -c [connectstring] -P [authpath] -t [tag] -f [outfile] -l -h"
     print "   dump records in xml" 
     print "               -l: list tags and exit"
     print "               -f [file] : dump to file"
+    print "               -h : help"
       
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "c:P:t:f:l", ["connect=","authpath=","tag","file","listtags"])
+    opts, args = getopt.getopt(sys.argv[1:], "c:P:t:f:lh", ["connect=","authpath=","tag","file","listtags","help"])
+    if not len(opts):
+        usage()
+        sys.exit(0)
 
 except getopt.GetoptError:
     #* print help information and exit:*
@@ -48,6 +54,10 @@ for opt,arg in opts:
     if opt in ("-f","--file"):
         dump_to_file= 1
         outfile=arg    
+
+    if opt in ("-h","--help"):
+        usage()
+        sys.exit(0)    
 
 a = FWIncantation()
 
