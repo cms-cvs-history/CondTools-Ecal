@@ -340,7 +340,7 @@ int main(){
     EcalLaserAPDPNRatios::EcalLaserAPDPNpair pair;
     pair.p1 =1;
     pair.p2 =2;
-    pair.p3 =3;
+    //    pair.p3 =3;
 
     laserrecord1.setValue(rawid,pair);
     
@@ -356,7 +356,7 @@ int main(){
       EcalLaserAPDPNRatios::EcalLaserAPDPNpair pair;
       pair.p1 =1;
       pair.p2 =2;
-      pair.p3 =3;
+      // pair.p3 =3;
       
       laserrecord1.setValue(rawid,pair);
     
