@@ -14,7 +14,7 @@ class EcalCondHandler:
 
   EcalCondHandler(const edm::ParameterSet & ps):
     xmlFileSource_(ps.getUntrackedParameter<std::string>("xmlFile")),
-    since_(ps.getUntrackedParameter<boost::int64_t>("since")){}
+    since_(ps.getUntrackedParameter<long long>("since")){}
 
   virtual void getNewObjects(){
 
@@ -30,7 +30,7 @@ class EcalCondHandler:
  private:
   
   std::string xmlFileSource_;
-  boost::int64_t since_; 
+  long long since_; 
  
 
 };
