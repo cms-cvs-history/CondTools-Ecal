@@ -28,7 +28,7 @@
 #include "FWCore/Framework/interface/EventSetup.h"
 #include "FWCore/Framework/interface/EventSetupRecordKey.h"
 
-#include "DQM/EcalCommon/interface/EcalErrorMask.h"
+#include "CondTools/Ecal/interface/EcalErrorMask.h"
 #include "CondTools/Ecal/interface/EcalErrorDictionary.h"
 
 #include "CondFormats/EcalObjects/interface/EcalChannelStatus.h"
@@ -112,8 +112,8 @@ namespace popcon {
       
     private:
       
-      unsigned long m_firstRun ;
-      unsigned long m_lastRun ;
+      unsigned int m_firstRun ;
+      unsigned int m_lastRun ;
       
       std::string m_location;
       std::string m_gentag;
